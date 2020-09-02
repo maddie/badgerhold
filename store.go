@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/dgraph-io/badger"
+	"github.com/dgraph-io/badger/v2"
 )
 
 const (
@@ -49,6 +49,10 @@ var DefaultOptions = Options{
 	Encoder:          DefaultEncode,
 	Decoder:          DefaultDecode,
 	SequenceBandwith: 100,
+}
+
+func init() {
+	DefaultOptions.DetectConflicts = false
 }
 
 // Open opens or creates a badgerhold file.

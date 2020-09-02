@@ -146,6 +146,7 @@ func testOptions() badgerhold.Options {
 	opt.Dir = tempdir()
 	opt.ValueDir = opt.Dir
 	opt.Logger = emptyLogger{}
+	opt.DetectConflicts = false
 	// opt.ValueLogLoadingMode = options.FileIO // slower but less memory usage
 	// opt.TableLoadingMode = options.FileIO
 	// opt.NumMemtables = 1

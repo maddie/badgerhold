@@ -11,7 +11,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/dgraph-io/badger"
+	"github.com/dgraph-io/badger/v2"
+
 	"github.com/timshannon/badgerhold"
 )
 
